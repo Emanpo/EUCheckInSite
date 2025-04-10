@@ -82,3 +82,13 @@ input[type="date"] {
     from { left: -150px; }
     to   { left: 110%; }
 }
+
+.qr-img {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 20px;
+    border: 2px solid #002D74;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+}
