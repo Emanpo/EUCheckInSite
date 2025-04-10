@@ -93,7 +93,7 @@ input[type="date"] {
     background-color: white;
 }
 
-.school-image {
+.SchoolLogo {
     position: absolute;
     bottom: 10px;
     width: 100%;
@@ -101,7 +101,7 @@ input[type="date"] {
     justify-content: center;
 }
 
-.school-image img {
+.SchoolLogo img {
     height: 60px;
     opacity: 0.9;
 }
