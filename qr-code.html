@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Event QR Code</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Event QR Code</h1>
+
+    <!-- QR Code Display -->
+    <img id="qrCode" class="qr-img" alt="QR Code" />
+
+    <!-- Download Button -->
+    <a id="downloadBtn" class="btn" download="event-qr-code.png">Download QR Code</a>
+
+    <a href="hoasting.html" class="btn">Back to Host Page</a>
+  </div>
+
+  <script>
+    // Your event link or identifier to encode
+    const eventUrl = "https://yourschoolsite.com/event-checkin"; // Change this to your actual event/check-in URL
+    const qrApi = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(eventUrl)}&size=250x250`;
+
+    // Inject QR code into the image
+    const qrImg = document.getElementById("qrCode");
+    const downloadBtn = document.getElementById("downloadBtn");
+    qrImg.src = qrApi;
+
+    // Set download link to the same image
+    downloadBtn.href = qrApi;
+  </script>
+</body>
+</html>
