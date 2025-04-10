@@ -22,7 +22,7 @@
   <script>
     // Your event link or identifier to encode
     const eventUrl = "https://yourschoolsite.com/event-checkin"; // Change this to your actual event/check-in URL
-    const qrApi = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(eventUrl)}&size=250x250`;
+    const qrApi = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example${encodeURIComponent(eventUrl)}&size=250x250`;
 
     // Inject QR code into the image
     const qrImg = document.getElementById("qrCode");
