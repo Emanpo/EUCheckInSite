@@ -25,7 +25,6 @@
     const eventUrl = "checkingIn.html"; 
     const qrApi = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example${encodeURIComponent(eventUrl)}&size=250x250`;
 
-    // Inject QR code into the image and set download link
     const qrImg = document.getElementById("qrCode");
     const downloadBtn = document.getElementById("downloadBtn");
     qrImg.src = qrApi;
