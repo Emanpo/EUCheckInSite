@@ -1,26 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Create Event</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create New Event</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="container">
     <h1>Create a New Event</h1>
-    
-    <form action="#" method="POST">
-      <input type="text" name="event-name" placeholder="Event Name" required style="padding: 10px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc;"><br><br>
-      <input type="date" name="event-date" required style="padding: 10px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc;"><br><br>
-      <button type="submit" class="btn">Create Event</button>
-    </form>
-  
-    <a href="qr-code.html" class="btn">Generate QR Code</a>
 
-    <br>
+    <form id="eventForm">
+      <input type="text" id="eventName" placeholder="Event Name" required /><br />
+      <input type="date" id="eventDate" required /><br />
+
+      <button type="submit" class="btn">Save Event</button>
+    </form>
+
+    <!-- Hidden by default -->
+    <a href="qr-code.html" class="btn" id="qrBtn" style="display: none;">Generate QR Code</a>
+
     <a href="hoasting.html" class="btn">Back to Host Page</a>
   </div>
+
+  <script>
+    const form = document.getElementById("eventForm");
+    const qrBtn = document.getElementById("qrBtn");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault(); // Prevent actual form submission
+
+      const eventName = document.getElementById("eventName").value;
+      const eventDate = document.getElementById("eventDate").value;
+
+      if (eventName && eventDate) {
+        // Optionally store event data for use in QR code page
+        localStorage.setItem("eventName", eventName);
+        localStorage.setItem("eventDate", eventDate);
+
+        // Reveal QR button
+        qrBtn.style.display = "inline-block";
+        alert("Event saved! You can now generate the QR code.");
+      }
+    });
+  </script>
 </body>
 </html>
-
