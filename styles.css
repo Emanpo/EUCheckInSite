@@ -92,3 +92,11 @@ input[type="date"] {
     padding: 10px;
     background-color: white;
 }
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
