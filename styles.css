@@ -92,3 +92,16 @@ input[type="date"] {
     padding: 10px;
     background-color: white;
 }
+
+.school-image {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.school-image img {
+    height: 60px;
+    opacity: 0.9;
+}
