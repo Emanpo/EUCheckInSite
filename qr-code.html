@@ -23,7 +23,7 @@
   <script>
     // Link to check-in page
     const eventUrl = "checkingIn.html"; // Replace if dynamic URL later
-    const qrApi = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(eventUrl)}&size=250x250`;
+    const qrApi = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example${encodeURIComponent(eventUrl)}&size=250x250`;
 
     // Inject QR code into the image and set download link
     const qrImg = document.getElementById("qrCode");
