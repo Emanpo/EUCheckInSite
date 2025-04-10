@@ -28,17 +28,17 @@
     const qrBtn = document.getElementById("qrBtn");
 
     form.addEventListener("submit", function(e) {
-      e.preventDefault(); // Prevent actual form submission
+      e.preventDefault(); // stops actual form submission
 
       const eventName = document.getElementById("eventName").value;
       const eventDate = document.getElementById("eventDate").value;
 
       if (eventName && eventDate) {
-        // Optionally store event data for use in QR code page
+        // cant store it anywhere yet
         localStorage.setItem("eventName", eventName);
         localStorage.setItem("eventDate", eventDate);
 
-        // Reveal QR button
+        // show QR button
         qrBtn.style.display = "inline-block";
         alert("Event saved! You can now generate the QR code.");
       }
