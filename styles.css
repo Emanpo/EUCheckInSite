@@ -96,12 +96,8 @@ input[type="date"] {
 .SchoolLogo {
     position: absolute;
     bottom: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.SchoolLogo img {
-    height: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
     opacity: 0.9;
 }
